@@ -29,4 +29,25 @@ class DinosaurTest extends TestCase
             'Did you put it in the washing machine?'
         );
     }
+
+    public function testReturnsFullSpecificationOfDinosaur()
+    {
+        $dinosaur = new Dinosaur();
+
+        $this->assertSame(
+            'The Unknown non-carnivorous dinosaur is 0 meters long',
+            $dinosaur->getSpecification()
+        );
+    }
+
+    public function testReturnsFullSpecificationForTyrannosaurus()
+    {
+        $dinosaur = new Dinosaur('Tyrannosaurus', true);
+
+        $dinosaur->setLength(12);
+        $this->assertSame(
+            'The Tyrannosaurus carnivorous dinosaur is 12 meters long',
+            $dinosaur->getSpecification()
+        );
+    }
 }
