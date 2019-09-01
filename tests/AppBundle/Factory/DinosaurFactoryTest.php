@@ -31,7 +31,7 @@ class DinosaurFactoryTest extends TestCase
 
         $this->assertInstanceOf(Dinosaur::class, $dinosaur);
 //        $this->assertInternalType('string', $dinosaur->getGenus());  // 棄用
-        $this->assertIsString($dinosaur->getGenus());
+//        $this->assertIsString($dinosaur->getGenus());
         $this->assertSame('Velociraptor', $dinosaur->getGenus());
         $this->assertSame(5, $dinosaur->getLength());
     }

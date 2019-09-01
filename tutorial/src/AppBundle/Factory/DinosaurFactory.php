@@ -1,6 +1,8 @@
 <?php
 
 // this is not the entire class! Just some code to steal :)
+use AppBundle\Entity\Dinosaur;
+
 class DinosaurFactory
 {
     private function getLengthFromSpecification(string $specification): int
